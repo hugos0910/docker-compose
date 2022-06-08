@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  pytorch:
+    image: nvcr.io/nvidia/pytorch:22.05-py3
+    command: jupyter lab --ip 0.0.0.0 --port 8000 --allow-root
+    ports:
+      - 8000:8000
+    volumes:
+      - /home/hugo/kaggle/:/kaggle
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
