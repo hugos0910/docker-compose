@@ -6,7 +6,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - /home/hugo/workspace/:/workspace/
+      - /home/hugo/workspace/:/workspace/mount/
     deploy:
       resources:
         reservations:
