@@ -6,7 +6,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - /home/hugo/kaggle/:/workspace/kaggle
+      - /home/hugo/workspace/:/workspace/
     deploy:
       resources:
         reservations:
